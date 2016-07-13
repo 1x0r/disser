@@ -7,17 +7,23 @@
   \setmainlanguage{russian}
   \setotherlanguage{english}
   \defaultfontfeatures{Ligatures=TeX, Mapping=tex-text}
-  \fontspec
-  \setmainfont[Path = fonts/]{PTSerif-Regular.ttf}[
-  	BoldFont = PTSerif-Bold.ttf ,
-	ItalicFont = PTSerif-Italic.ttf ,
-	BoldItalicFont = PTSerif-BoldItalic.ttf ,
-  ]
-  \setsansfont[Path = fonts/]{PTSans-Regular.ttf}[
-  	BoldFont = PTSans-Bold.ttf ,
-	ItalicFont = PTSans-Italic.ttf ,
-  ]
-  \setmonofont[Path = fonts/]{PTMono-Regular.ttf}
+  \setmainfont[
+    Path = fonts/,
+    Extension = .ttf,
+  	BoldFont = PTSerif-Bold,
+	ItalicFont = PTSerif-Italic,
+	BoldItalicFont = PTSerif-BoldItalic
+  ]{PTSerif-Regular}
+  \setsansfont[
+    Path = fonts/,
+    Extension = .ttf,
+  	BoldFont = PTSans-Bold,
+	ItalicFont = PTSans-Italic
+  ]{PTSans-Regular}
+  \setmonofont[
+    Path = fonts/,
+    Extension = .ttf
+  ]{PTMono-Regular}
 \else
   \IfFileExists{pscyr.sty}{\renewcommand{\rmdefault}{ftm}}{}
 \fi
